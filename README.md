@@ -1,1 +1,3 @@
-é
+Este sistema simula Race Condition onde em uma barbearia existe um limite de 3 cadeiras (clientes que podem ficar aguardando) e um barbeiro que dorme enquanto não houver clientes querendo cortar (Threads).
+Quando um cliente chega o mesmo acordará o barbeiro se este estiver dormindo, em seguida se sentará para o corte. Caso outro cliente chegue enquanto alguém esteja sendo atendido, este aguardará o termino do corte (wait), todavia, se o corte acabar e outro cliente chegar enquanto o primeiro da fila estiver em wait, este passará na frente simulando o Race Condition.
+Caso aumentassemos drasticamente o fluxo de clientes, é possível também encontrar o problema de stavation, onde que um determinado cliente poderá esperar para sempre visto que sempre ao "acordar" (termino do wait) outro cliente estará ocupando a cadeira para corte.
